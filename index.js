@@ -51,12 +51,12 @@ function primeNumber(n){
         if(n%i===0){
             primeCount.push(true);
             //primeNumber(i);
-            console.log(i, "is divisible.")
+           // console.log(i, "is divisible.")
 
         } else{
             primeCount.push(false);
             //primeNumber(i);
-            console.log(i, "not divisble.")
+            //console.log(i, "not divisble.")
         }
     }
     if(n===1){
@@ -82,6 +82,7 @@ function primeNumber(n){
 function printPrime(n){
 
     for (let y=n; y>1; y--){
+        setTimeout(100);
        // primeResult = primeNumber(y)
         if(primeNumber(y).prime===true){
 
@@ -93,4 +94,4 @@ function printPrime(n){
 }
 printPrime(97);
 alert("Initial Phase finished! Now starting 10,000!");
-printPrime(700);
+printPrime(10000);
