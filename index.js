@@ -37,6 +37,28 @@ function trampoline(x){
 //Work on this still
 
 let pElement = document.querySelector("p")
+
+let input;
+let button = document.getElementById("submitBtn")
+let buttonPressed = 0;
+
+
+button.addEventListener("click", function(){
+
+    input = document.getElementById("userInput").value;
+    pElement.textContent = input;
+    console.log(input);
+    printPrime(input);
+    alert("Initial Phase finished!");
+    //printPrime(10000);
+    buttonPressed+=1;
+    if(buttonPressed===1){
+        alert("Button pressed! Now doing 10000!")
+        pElement.innerHTML+="10K";
+        printPrime(10000);
+    }
+})
+
 let number = Number(pElement.textContent);
 console.log(number+4);
 
@@ -92,6 +114,5 @@ function printPrime(n){
 
     }
 }
-printPrime(97);
-alert("Initial Phase finished! Now starting 10,000!");
-printPrime(10000);
+
+
